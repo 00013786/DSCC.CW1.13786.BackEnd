@@ -28,7 +28,7 @@ namespace DSCC.CW1._14610.Controllers
 
 
         // GET: api/Cars/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetCarById")]
         public IActionResult Get(int id)
         {
             var Car = _CarRepository.GetCarById(id);

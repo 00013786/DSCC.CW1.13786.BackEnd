@@ -24,6 +24,7 @@ builder.Services.AddControllers()
 builder.Services.AddDbContext<CarContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ProductDB")));
 builder.Services.AddTransient<ICarRepository, CarRepository>();
+builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 
 var app = builder.Build();
 
